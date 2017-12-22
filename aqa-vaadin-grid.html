@@ -6,6 +6,7 @@
     <style>
       :host {
         height: auto;
+        border: 1px solid #ddd;
       }
 
       [part~="cell"] {
@@ -18,13 +19,21 @@
         margin:0;
       }
 
+      [part~="cell"]:last-child {
+        border-right:0;
+      }
+
+      [part~="cell"]:focus {
+        outline: none;
+      }
+
+
       [part~="header-cell"],
       [part~="footer-cell"] {
         color: white;
         font-size: 1rem;
         background-color:#62a8ea;
         padding: 0.5rem;
-        border-right:1px solid #ddd;
         text-align:center;
         font-family: MitrLight;
       }
@@ -39,21 +48,25 @@
         color: #000;
         font-size: 1rem;
         padding:5px;
-        border-right:1px solid #ddd;
         font-family: TrirongRegular;
         white-space: normal;
         margin:0;
       }
 
-      /* [part~="body-cell"] {
 
-      } */
-    
-
-      [part~="row"][selected] [part~="body-cell"] {
-        background: #F5F5F5;
+      [part~="body-cell"],
+      [part~="row"]:last-child [part~="header-cell"] {
+        border-bottom: 1px solid #ddd;
       }
 
+      [part~="row"]:nth-child(even) [part~="body-cell"] {
+        background-color:#f3f7f9;
+      }
+
+      [part~="row"]:hover [part~="body-cell"] {
+        background-color:#ECF9FA;
+      }
+      
     
     </style>
   </template>
