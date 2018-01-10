@@ -3,7 +3,7 @@
   "main": "aqa-vaadin-grid.html",
   "dependencies": {
     "polymer": "Polymer/polymer#^2.3.1",
-    "aqa-font": "9lon/aqa-font#^0.0.1"
+    "aqa-font": "9lon/aqa-font#^0.0.2"
   },
   "devDependencies": {
     "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^2.0.0",
@@ -12,6 +12,7 @@
     "vaadin-grid": "vaadin/vaadin-grid#^4.0.0"
   },
   "resolutions": {
-    "polymer": "^2.3.1"
+    "polymer": "^2.3.1",
+    "aqa-font": "^0.0.2"
   }
 }
