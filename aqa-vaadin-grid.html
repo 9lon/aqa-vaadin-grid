@@ -8,6 +8,9 @@
         height: auto;
         border: 1px solid #ddd;
       }
+      :host [part~="cell"]:not([part~="details-cell"]) ::slotted(vaadin-grid-cell-content) {
+        white-space: normal;
+      }
 
       [part~="cell"] {
         color: #000;
@@ -15,7 +18,6 @@
         padding:5px;
         border-right:1px solid #ddd;
         font-family: TrirongRegular;
-        white-space: normal;
         margin:0;
       }
 
@@ -49,7 +51,6 @@
         font-size: 1rem;
         padding:5px;
         font-family: TrirongRegular;
-        white-space: normal;
         margin:0;
       }
 
