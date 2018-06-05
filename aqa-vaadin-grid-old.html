@@ -52,17 +52,21 @@
             static get is() { return 'aqa-vaadin-grid'; }
             static get properties() {
                 return {
-                    tooltipFor:{
-                        type:String,
-                        value:''
-                    }
-                }
-            }
-            ready(){
-                super.ready()
+    <script type="module">
+import { PolymerElement } from '../../@polymer/polymer/polymer-element.js';
+class AqaVaadinGrid extends PolymerElement {
+    static get is() { return 'aqa-vaadin-grid'; }
+    static get properties() {
+        return {
+            tooltipFor:{
+                type:String,
+                value:''
             }
         }
-        window.customElements.define(AqaVaadinGrid.is, AqaVaadinGrid);
-
-    </script>
-</dom-module>
+    }
+    ready(){
+        super.ready()
+    }
+}
+window.customElements.define(AqaVaadinGrid.is, AqaVaadinGrid);
+</script>

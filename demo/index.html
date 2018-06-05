@@ -1,66 +1,68 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
 
-    <title>aqa-vaadin-grid demo</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
 
-    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+  <title>aqa-vaadin-grid</title>
 
-    <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
-    <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
-    <link rel="import" href="../../vaadin-grid/vaadin-grid.html">
+  <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
 
-    <link rel="import" href="../aqa-vaadin-grid.html">
-    <!-- <link rel="import" href="../../vaadin-material-theme/vaadin-grid.html"> -->
-    <custom-style>
-      <style is="custom-style" include="demo-pages-shared-styles">
-      </style>
-    </custom-style>
-  </head>
-  <body>
-    <div class="vertical-section-container centered">
-      <h3>Basic aqa-vaadin-grid demo</h3>
-      <demo-snippet>
-        <template>
+  <script type="module">
+    import '@polymer/iron-demo-helpers/demo-pages-shared-styles';
+    import '@polymer/iron-demo-helpers/demo-snippet';
+    import '@vaadin/vaadin-grid/vaadin-grid';
+  </script>
 
+  <script type="module" src="../aqa-vaadin-grid.js"></script>
+  <custom-style>
+    <style is="custom-style" include="demo-pages-shared-styles">
+    </style>
+  </custom-style>
+</head>
 
-          <vaadin-grid id="grid" aria-label="Basic Binding Example" items="[[users.result]]">
+<body>
+  <div class="vertical-section-container centered">
+    <h3>Basic aqa-vaadin-grid</h3>
+    <demo-snippet>
+      <template>
 
-            <vaadin-grid-column width="50px" flex-grow="0">
-              <template class="header">#</template>
-              <template>[[index]]</template>
-              <!-- If necessary, the footer could be set using <template class="footer"> -->
-              <template class="footer">#</template>
-            </vaadin-grid-column>
-      
-            <vaadin-grid-column>
-              <template class="header">Name</template>
-              <template>[[item.name]]</template>
-              <template class="footer">Name</template>
-            </vaadin-grid-column>
-      
-            <vaadin-grid-column>
-              <template class="header">Age</template>
-              <template>[[item.age]]</template>
-              <template class="footer">Age</template>
-            </vaadin-grid-column>
-      
-          </vaadin-grid>
+        <vaadin-grid id="grid" aria-label="Basic Binding Example" items="[[users.result]]">
 
-          <script>
-            document.getElementById('grid').items = [
-              {name:'จุฬาลงกรณ์มหาวิทยาลัย ุฬาลงกรณ์มหาวิทยาลัยจุฬาลงกรณ์มหาวิทยาลัย', age: 19},
-              {name:'Chemical Biology', age: 20},
-              {name:'จุฬาลงกรณ์มหาวิทยาลัย', age: 19},
-              {name:'Chemical Biology', age: 20}
-            ]
-          </script>
+          <vaadin-grid-column width="50px" flex-grow="0">
+            <template class="header">#</template>
+            <template>[[index]]</template>
+            <!-- If necessary, the footer could be set using <template class="footer"> -->
+            <template class="footer">#</template>
+          </vaadin-grid-column>
 
+          <vaadin-grid-column>
+            <template class="header">Name</template>
+            <template>[[item.name]]</template>
+            <template class="footer">Name</template>
+          </vaadin-grid-column>
 
-        </template>
-      </demo-snippet>
-    </div>
-  </body>
+          <vaadin-grid-column>
+            <template class="header">Age</template>
+            <template>[[item.age]]</template>
+            <template class="footer">Age</template>
+          </vaadin-grid-column>
+
+        </vaadin-grid>
+
+        <script>
+          document.getElementById('grid').items = [
+            { name: 'จุฬาลงกรณ์มหาวิทยาลัย ุฬาลงกรณ์มหาวิทยาลัยจุฬาลงกรณ์มหาวิทยาลัย', age: 19 },
+            { name: 'Chemical Biology', age: 20 },
+            { name: 'จุฬาลงกรณ์มหาวิทยาลัย', age: 19 },
+            { name: 'Chemical Biology', age: 20 }
+          ]
+        </script>
+
+      </template>
+    </demo-snippet>
+  </div>
+</body>
+
 </html>

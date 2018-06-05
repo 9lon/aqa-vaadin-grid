@@ -1,7 +1,10 @@
-<link rel="import" href="../polymer/polymer-element.html">
-<link rel="import" href="../aqa-font/aqa-trirong-font.html">
-<link rel="import" href="../aqa-font/aqa-mitr-font.html">
-<dom-module id="aqa-vaadin-grid" theme-for="vaadin-grid">
+import '@polymer/polymer/polymer-element.js';
+import '@nylon/aqa-font/aqa-trirong-font.js';
+import '@nylon/aqa-font/aqa-mitr-font.js';
+const $_documentContainer = document.createElement('template');
+$_documentContainer.setAttribute('style', 'display: none;');
+
+$_documentContainer.innerHTML = `<dom-module id="aqa-vaadin-grid" theme-for="vaadin-grid">
   <template>
     <style>
       :host {
@@ -71,4 +74,6 @@
     
     </style>
   </template>
-</dom-module>
+</dom-module>`;
+
+document.head.appendChild($_documentContainer.content);
