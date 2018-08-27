@@ -4,8 +4,9 @@
 <dom-module id="aqa-vaadin-grid" theme-for="vaadin-grid">
   <template>
     <style>
+      
       :host {
-        height: auto;
+        /* height: 400px; */
         border: 1px solid #ddd;
       }
       :host [part~="cell"]:not([part~="details-cell"]) ::slotted(vaadin-grid-cell-content) {
@@ -32,11 +33,15 @@
 
       [part~="header-cell"],
       [part~="footer-cell"] {
+        --lumo-font-size-m: 16px;
         color: white;
-        font-size: 1rem;
-        background-color:#62a8ea;
+        /* font-size: 1rem; */
+        /* background-color:#62a8ea; */
+        /* font-weight: bolder; */
+        background-image: linear-gradient(to bottom,#62a8ea 2%, #62a8ea 98%);
         padding: 0.5rem;
         text-align:center;
+        height: 10px;
         font-family: MitrLight;
       }
 
